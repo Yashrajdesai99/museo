@@ -1,0 +1,14 @@
+/* Space Grotesk, Plus Jakarta Sans, and JetBrains Mono font utilities */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

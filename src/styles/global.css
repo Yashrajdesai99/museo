@@ -1,0 +1,134 @@
+@import './tokens.css';
+@import './fonts.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+/* Neo-brutalist hard shadow press utilities */
+.brutal-box {
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
+  background-color: var(--color-paper);
+}
+
+.brutal-box-sm {
+  border: var(--border-thin);
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.brutal-press {
+  transition: transform var(--dur-fast) var(--ease-ui), box-shadow var(--dur-fast) var(--ease-ui), background-color var(--dur-fast) var(--ease-ui);
+}
+
+.brutal-press:hover:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0px var(--color-ink);
+}
+
+.brutal-press:active:not(:disabled) {
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0px var(--color-ink);
+}
+
+/* Masked line slide-up reveal for kinetic headlines & shared specimen reveal */
+@keyframes maskedSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kinetic-reveal {
+  animation: maskedSlideUp var(--dur-base) var(--ease-cinematic) both;
+}
+
+/* Focus visibility for keyboard accessibility */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Custom brutalist range input for Deep Time Slider */
+input[type='range'].deep-time-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type='range'].deep-time-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 32px;
+  background: var(--color-accent);
+  border: 3px solid var(--color-ink);
+  box-shadow: 3px 3px 0px var(--color-ink);
+  cursor: grab;
+  margin-top: -10px;
+}
+
+input[type='range'].deep-time-range:active::-webkit-slider-thumb {
+  cursor: grabbing;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--color-ink);
+}
+
+input[type='range'].deep-time-range::-moz-range-thumb {
+  width: 24px;
+  height: 32px;
+  background: var(--color-accent);
+  border: 3px solid var(--color-ink);
+  box-shadow: 3px 3px 0px var(--color-ink);
+  border-radius: 0;
+  cursor: grab;
+}
+
+@keyframes bauhausWipe {
+  0% {
+    transform: translateY(-100%);
+  }
+  45% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

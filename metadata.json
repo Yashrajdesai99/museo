@@ -1,0 +1,6 @@
+{
+  "name": "MUSEO — Virtual Museum of Deep Time",
+  "description": "An interactive 3D virtual museum platform exploring 4.6 billion years of Earth's geological evolution, continental drift, mass extinctions, and 20 fact-verified fossils and cultural artifacts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

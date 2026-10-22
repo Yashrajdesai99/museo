@@ -1,0 +1,41 @@
+:root {
+  /* Core Palette Tokens (Bauhaus / Neo-Brutalist Institutional Archive — design.md v2) */
+  --color-ink: #0E0E0E;
+  --color-paper: #F2EDE4;
+  --color-paper-warm: #E8E1D5;
+  --color-accent: #FFD400;
+  --color-ink-soft: #1C1C1C;
+  --color-ink-muted: #4A4742;
+  --color-line: #0E0E0E;
+
+  /* 5 Era 3D Scene Tints (Section 3.2 — 3D scenes only) */
+  --tint-hadean: #B3261E;
+  --tint-proterozoic: #1F6F8B;
+  --tint-paleozoic: #4C9A5B;
+  --tint-mesozoic: #E0701A;
+  --tint-cenozoic: #4F86F7;
+
+  /* Borders & Hard Shadows (Section 3.5) */
+  --border-thin: 2px solid var(--color-ink);
+  --border-thick: 3px solid var(--color-ink);
+  --border-heavy: 4px solid var(--color-ink);
+
+  --shadow-hard-sm: 4px 4px 0px var(--color-ink);
+  --shadow-hard: 6px 6px 0px var(--color-ink);
+  --shadow-hard-lg: 10px 10px 0px var(--color-ink);
+  --shadow-hard-paper: 6px 6px 0px var(--color-paper);
+  --shadow-hard-accent: 6px 6px 0px var(--color-accent);
+
+  /* Typography (Section 3.3) */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Space Grotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Motion Tokens (Section 4.2) */
+  --ease-ui: cubic-bezier(0.7, 0, 0.2, 1);
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 150ms;
+  --dur-base: 400ms;
+  --dur-slow: 900ms;
+  --transition-snappy: 150ms cubic-bezier(0.7, 0, 0.2, 1);
+}
